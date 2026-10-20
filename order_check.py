@@ -9,7 +9,7 @@ threshold_minutes = 15
 alert_count = 0
 
 for order in orders:
-    needs_attention = (order["status"] == "pending" and order["minutes_waiting"] >= threshold_minutes)
+    needs_attention = needs_attention(order["status"], order["minutes_waiting"], threshold_minutes)
     if needs_attention:
       print(f'CHECK ALERT: Order ID {order["id"]} has been pending for {order["minutes_waiting"]} minutes.')
       alert_count += 1
