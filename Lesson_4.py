@@ -2,9 +2,9 @@ def needs_attention(status, minutes_waiting, threshold=10):  # Gumawa ng functio
     return status == "pending" and minutes_waiting >= threshold  # Return True kung pending at umabot na sa limit.
 
 orders = [  # Simulan ang list ng sample orders.
-    {"id": 101, "status": "completed", "minutes_waiting": 15},  # Completed na, kaya hindi dapat mag-alert. false
-    {"id": 102, "status": "completed", "minutes_waiting": 15},  # Completed na, kaya hindi dapat mag-alert. false
-    {"id": 103, "status": "pending", "minutes_waiting": 4},  # Pending pero 4 minutes pa lang, kaya walang alert. false
+    #{"id": 101, "status": "completed", "minutes_waiting": 15},  # Completed na, kaya hindi dapat mag-alert. false
+    #{"id": 102, "status": "completed", "minutes_waiting": 15},  # Completed na, kaya hindi dapat mag-alert. false
+    #{"id": 103, "status": "pending", "minutes_waiting": 4},  # Pending pero 4 minutes pa lang, kaya walang alert. false
 ]  # Tapusin ang list ng orders.
 
 alert_count = 0  # Simulan sa zero ang bilang ng alerts.
