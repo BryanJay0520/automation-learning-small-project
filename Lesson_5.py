@@ -12,8 +12,10 @@ orders = [
 alert_ids = []  # Gumawa ng empty list para sa mga order IDs that need attention.
 
 for order in orders:  # Isa-isang kunin ang bawat order.
+    
     if needs_attention(order["status"], order["minutes_waiting"],):  # ito nag-check kung kailangan ng attention gamit ang function na needs_attention.
         alert_ids.append(order["id"])  # Idagdag ang order ID sa list ng alerts.
+        print(f"Checking order ID: {order['id']} with status: {order['status']} and minutes waiting: {order['minutes_waiting']}")  # Ipakita ang order details.
 
 print(f"Orders needing attention: {alert_ids}")  # Ipakita ang mga order IDs na nangangailangan ng attention.   
 print(f"Total alerts: {len(alert_ids)}")  # Ipakita ang total na bilang ng alerts
